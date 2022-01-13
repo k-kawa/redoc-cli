@@ -1,8 +1,8 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/${PROJECT_ID}/redoc', '.']
-- name: 'gcr.io/${PROJECT_ID}/redoc'
+  args: ['build', '--tag=gcr.io/${PROJECT_ID}/redoc-cli', '.']
+- name: 'gcr.io/${PROJECT_ID}/redoc-cli'
   args: ['--help']
 
-images: ['gcr.io/${PROJECT_ID}/redoc']
+images: ['gcr.io/${PROJECT_ID}/redoc-cli']
 tags: ['k-kawa']
