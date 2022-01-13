@@ -1,0 +1,8 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcr.io/${PROJECT_ID}/redoc', '.']
+- name: 'gcr.io/${PROJECT_ID}/redoc'
+  args: ['--help']
+
+images: ['gcr.io/${PROJECT_ID}/redoc']
+tags: ['k-kawa']
